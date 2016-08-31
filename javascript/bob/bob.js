@@ -10,6 +10,8 @@ Bob.prototype.hey = function(input) {
 
   if(input[stringLength - 1] == "!") {
     return 'Whoa, chill out!';
+  } else if (input[stringLength - 1] == "?") {
+    return "Sure.";
   } else {
     return "Whatever.";
   }
