@@ -9,7 +9,9 @@ Bob.prototype.hey = function(input) {
   var stringLength = input.length;
 
 
-  if((input == input.toUpperCase()) && ((input[stringLength - 1] == "!") || (input[stringLength - 1] == "?"))  ) {
+  if(isNaN(input) && (input[stringLength - 1] == "?") && (input.toLowerCase() == input))  {
+    return "Sure.";
+  } else if ((input == input.toUpperCase()) && ((input[stringLength - 1] == "!") || (input[stringLength - 1] == "?"))){
     return 'Whoa, chill out!';
   } else if (input[stringLength - 1] == "?") {
     return "Sure.";
@@ -20,3 +22,8 @@ Bob.prototype.hey = function(input) {
 };
 
 module.exports = Bob;
+
+//
+// else if (input[stringLength - 1] == "?") {
+//   return "Sure.";
+// }
